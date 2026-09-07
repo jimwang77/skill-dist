@@ -1,0 +1,10 @@
+本目录里的安装包（.whl）是从 PyPI 原样取下的第三方发行件，未做任何修改，只是换个下载点，
+供公司内部电脑在连不上 PyPI 时由 label-proof 的 deps --install 自动取用。各包的许可证原文都在
+包内 *.dist-info/ 目录里，随包分发。
+
+- Pillow：MIT-CMU（HPND）许可。https://github.com/python-pillow/Pillow
+- pillow-heif：BSD-3-Clause 许可；其中打包的 libheif、libde265 为 LGPL-3.0，
+  以动态库形式随包分发，未修改，源码见 https://github.com/strukturag/libheif 与
+  https://github.com/strukturag/libde265 。https://github.com/bigcat88/pillow_heif
+
+如对再分发方式有疑问，请联系仓库维护人。
