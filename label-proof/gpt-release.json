@@ -2,10 +2,10 @@
   "name": "label-proof-gpt",
   "version": "7.5.8",
   "channel": "stable",
-  "source_version": "7.2.2",
-  "source_commit": "621b1ff0686f8ff14b8d89c9da0cc4cbac5efd4f",
+  "source_version": "7.5.8",
+  "source_commit": "b3e1eb8c8f8c1d251b93fa69f42113ce98b62e07",
   "plugin_path": "openai/label-proof-gpt",
-  "package_manifest_sha256": "b64ffe4fc7e221eff3e71e393d87ee2ce3fc57dc27b1cbb09d46a8248b1b1392",
+  "package_manifest_sha256": "e14b8b8e14934b18a04428154ee4dcd681f0e12ddd4344664d63502e53265ae2",
   "published_date": "2026-10-31",
   "requires_local_executor": true,
   "protection_mode": "program-entry",
@@ -13,12 +13,12 @@
   "program_workflow_acceptance": "passed_without_native_hooks",
   "member_machine_acceptance": "pending-workspace-update-and-member-use",
   "python_cache_mode": "private-per-run-no-writes",
-  "public_version_mode": "single-current-package-version",
-  "native_desktop_acceptance": "254 adapter tests, 20 upstream suites (880 checks) on the GPT package, 27-step synthetic flow passed; real-ticket isolated regressions and other member machines not run",
+  "public_version_mode": "claude-and-gpt-share-one-version",
+  "native_desktop_acceptance": "255 adapter tests, 20 upstream suites (880 checks) on the GPT package, 27-step synthetic flow passed; real-ticket isolated regressions and other member machines not run",
   "compatibility_tests": {
     "upstream_suites": 20,
     "upstream_checks": 880,
-    "adapter_all": 254,
+    "adapter_all": 255,
     "synthetic_full_flow_steps": 27
   },
   "report_style": "shared-A-B-defect-transparent-logo-collapsed",
@@ -58,6 +58,8 @@
     "feedback submissions record whether the page operator matches the registered pre-A operator; only a match counts as the operator's own confirmation",
     "update manifest moved to public skill-dist; private-repo raw URL returned 404",
     "missing RAR/7Z decoder and HEIC decoder messages tell the user what to send instead of pointing to blocked installs",
-    "SKILL report wording maps 重大错误/需人工干预 to the body's 阻断项/需人工确认项 rules"
+    "SKILL report wording maps 重大错误/需人工干预 to the body's 阻断项/需人工确认项 rules",
+    "Claude plugin renumbered to 7.5.8; both hosts now ship one version from one engine commit",
+    "repackaged without 47 iCloud conflict copies (\"* 2.*\") that the first 7.5.8 commit carried; new test rejects files outside the manifest"
   ]
 }
