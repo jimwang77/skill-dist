@@ -1,12 +1,12 @@
 {
   "name": "label-proof-gpt",
-  "version": "7.5.11",
+  "version": "7.6.0",
   "channel": "stable",
-  "source_version": "7.5.11",
-  "source_commit": "e6598bd156b7033b3f36c12f163aa9fdf60acdd2",
+  "source_version": "7.6.0",
+  "source_commit": "63f63aef96c73e0993a19c06e29c1e7d2d4bc589",
   "plugin_path": "openai/label-proof-gpt",
-  "package_manifest_sha256": "afafc65c5c71cf98c129b9c3230f34ba234ca3b3e8b4eeae6d65225480e46535",
-  "published_date": "2026-11-07",
+  "package_manifest_sha256": "4b82d54b36f3bc899d389b30f569bcfc28723975504412a828be057930b7cd93",
+  "published_date": "2026-11-12",
   "requires_local_executor": true,
   "protection_mode": "program-entry",
   "native_hooks_required": false,
@@ -14,13 +14,14 @@
   "member_machine_acceptance": "pending-workspace-update-and-member-use",
   "python_cache_mode": "private-per-run-no-writes",
   "public_version_mode": "claude-and-gpt-share-one-version",
-  "native_desktop_acceptance": "23 business suites per host; 258 GPT adapter checks; 7 source-isolation tests per host; 31-step synthetic flow; actual-ticket copy verified. Member loading unverified.",
+  "native_desktop_acceptance": "24 business suites per host (953 checks on GPT); 265 GPT adapter checks; 31-step synthetic flow; 10 relay splits x2 (plus extra-stock) with delivery-check A/B/D; variant relay both directions; real-ticket copies. Member loading unverified.",
   "compatibility_tests": {
-    "claude_suites": 23,
-    "upstream_suites": 23,
-    "adapter_all": 258,
-    "source_isolation_tests_per_host": 7,
-    "synthetic_full_flow_steps": 31
+    "claude_suites": 24,
+    "upstream_suites": 24,
+    "upstream_checks": 953,
+    "adapter_all": 265,
+    "synthetic_full_flow_steps": 31,
+    "relay_splits": 10
   },
   "report_style": "shared-A-B-defect-transparent-logo-collapsed",
   "evidence_validation": "two-distinct-source-images-or-explicit-source-mismatch",
@@ -101,9 +102,14 @@
     "Old cross-SKU serial indexes require source refresh without deleting history",
     "External photo path rejection directs caller to host.py receive"
   ],
+  "cross_host_relay": {
+    "shared_engine": "GPT business patches (variants, lot choice, extra-stock identity, RAR/7Z, inbox receipts, reset route, report style) merged into label-proof/; adapter keeps host-only parts",
+    "shared_report_receipts": ".state/report-receipts per A/B/D report on both hosts; unsigned (accepted weaker tamper scheme); GPT own reports still ticket-key signed",
+    "gpt_delivery_check_accepts_claude_reports": "report sha and basis files (state + sources) unchanged",
+    "sku_link": "GPT only (depends on ticket key)"
+  },
   "validation_limits": [
-    "Historical Hongqiao inject_l1 fixture path unavailable; targeted source-copy regression and both-host business suites passed",
     "Workspace sync and member machine loading unverified",
-    "CURRENT retained until member update verification"
+    "CURRENT to be set only after Jim approves the release"
   ]
 }
